@@ -1,11 +1,11 @@
 from libqtile.config import Key
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 from .groups import _groups
 from .screen import _screens
 
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "kitty"
 
 
 _keys = [
@@ -19,6 +19,7 @@ _keys = [
     Key([mod,"control"], "Tab", lazy.widget["keyboardlayout"].next_keyboard()),
     Key([mod, "control"], "d", lazy.widget["volume"].decrease_vol()),
     Key([mod, "control"], "a", lazy.widget["volume"].increase_vol()),
+    Key([mod], "p", lazy.spawn("flameshot gui")),
 
     # screen
     Key([mod, "mod1"], "l", lazy.next_screen()),

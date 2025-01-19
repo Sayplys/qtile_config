@@ -1,7 +1,6 @@
 from libqtile.config import Screen
 from libqtile import bar, widget
 
-
 _widgets = [widget.GroupBox(inactive="#808080", highlight_method='line', this_current_screen_border='#ff2121'), 
             widget.Spacer(),
             widget.Clock(),

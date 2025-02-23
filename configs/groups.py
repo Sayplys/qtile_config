@@ -2,7 +2,6 @@ from libqtile.config import Group, Match
 
 _groups = [
     Group(name="term",
-          matches=[Match(wm_class="kitty")],
           spawn=["kitty"],
           layout="tile"),
     Group(name="web",
@@ -10,13 +9,15 @@ _groups = [
           spawn=["firefox"],
           layout="max",),
     Group(name="media",
-          matches=[Match(wm_class="spotify-launcher")],
-          spawn=["spotify-launcher"],
+          matches=[Match(wm_class="spotify")],
+          spawn=["spotify"],
           layout="max"),
     Group(name="programação",
-          matches=[Match(wm_class="kitty")],
           spawn=["kitty"],
           layout="max",),
+    Group(name="comms",
+          spawn=["discord"],
+          layout="max"),
     Group("docs"),
     Group("extra"),
 ]
